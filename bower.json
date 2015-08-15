@@ -1,0 +1,29 @@
+{
+  "name": "angular-schema-form-iban",
+  "version": "0.1.0",
+  "authors": [
+    "Andreas Kaiser <disko@binary-punks.com>"
+  ],
+  "description": "IBAN (International Bank Account Number) schema form field for angular-schema-form",
+  "main": "dist/angular-schema-form-iban.js",
+  "keywords": [
+    "AngularJS",
+    "JSONSchema"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/disko/angular-schema-form-iban",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iban": "~0.0.5"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}

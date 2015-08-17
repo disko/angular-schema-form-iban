@@ -10,23 +10,17 @@ app.controller('formCtrl', function($scope) {
     'type': 'object',
     'title': 'Comment',
     'properties': {
-      'iban1': {
-        'title': 'IBAN 1 (type string)',
+      'iban': {
+        'title': 'IBAN',
         'type': 'string'
-      },
-      'iban2': {
-        'title': 'IBAN 2 (type iban)',
-        'type': 'iban'
       }
     },
-    'required': ['iban1', 'iban2']
+    'required': ['iban']
   };
   $scope.form = [
     {
-      key: 'iban1',
+      key: 'iban',
       type: 'iban'
-    }, {
-      key: 'iban2'
     }
   ];
   $scope.model = {};
@@ -36,10 +30,10 @@ app.controller('formCtrl', function($scope) {
     }
   }), true);
   $scope.setValidIban = function() {
-    return $scope.model.iban1 = validIbans[Math.floor(Math.random() * validIbans.length)];
+    return $scope.model.iban = validIbans[Math.floor(Math.random() * validIbans.length)];
   };
   $scope.setInvalidIban = function() {
-    return $scope.model.iban1 = '123';
+    return $scope.model.iban = '123';
   };
 });
 

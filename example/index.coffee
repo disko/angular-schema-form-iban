@@ -80,20 +80,16 @@ app.controller 'formCtrl', ($scope) ->
     'type': 'object'
     'title': 'Comment'
     'properties':
-      'iban1':
-        'title': 'IBAN 1 (type string)'
+      'iban':
+        'title': 'IBAN'
         'type': 'string'
-      'iban2':
-        'title': 'IBAN 2 (type iban)'
-        'type': 'iban'
-    'required': ['iban1', 'iban2']
+    'required': ['iban']
 
   $scope.form = [
     {
-      key: 'iban1'
+      key: 'iban'
       type: 'iban'
     }
-    { key: 'iban2' }
   ]
 
   $scope.model = {}
@@ -105,9 +101,9 @@ app.controller 'formCtrl', ($scope) ->
   ), true
 
   $scope.setValidIban = ->
-    $scope.model.iban1 = validIbans[Math.floor(Math.random() * validIbans.length)]
+    $scope.model.iban = validIbans[Math.floor(Math.random() * validIbans.length)]
 
   $scope.setInvalidIban = ->
-    $scope.model.iban1 = '123'
+    $scope.model.iban = '123'
 
   return

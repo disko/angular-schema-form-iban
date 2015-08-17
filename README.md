@@ -19,7 +19,6 @@ schema = {
   },
   'required': ['iban']
 };
-
 form = [
   {
     key: 'iban',

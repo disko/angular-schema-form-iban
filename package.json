@@ -1,6 +1,6 @@
 {
   "name": "angular-schema-form-iban",
-  "version": "0.1.1",
+  "version": "0.2.0-dev",
   "description": "IBAN (International Bank Account Number) schema form field for angular-schema-form",
   "main": "dist/angular-schema-form-iban.js",
   "scripts": {

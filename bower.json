@@ -1,6 +1,6 @@
 {
   "name": "angular-schema-form-iban",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     "Andreas Kaiser <disko@binary-punks.com>"
   ],
@@ -8,7 +8,8 @@
   "main": "dist/angular-schema-form-iban.js",
   "keywords": [
     "AngularJS",
-    "JSONSchema"
+    "JSONSchema",
+    "angular-schema-form-add-on"
   ],
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/disko/angular-schema-form-iban",

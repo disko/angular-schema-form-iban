@@ -18,7 +18,7 @@ angular.module('schemaForm').config (schemaFormProvider, schemaFormDecoratorsPro
 
 angular.module('schemaForm').directive 'iban', ->
 
-  # see http://www.benlesh.com/2012/12/angular-js-custom-validation-via.html?m=1
+  # see http://www.benlesh.com/2012/12/angular-js-custom-validation-via.html
 
   validateIban = (value) ->
   iban =
@@ -45,10 +45,14 @@ angular.module('schemaForm').directive 'iban', ->
 
         if valid
           value = IBAN.electronicFormat(value)
-        # if it's valid, return the value to the model, otherwise return undefined.
+          scope.$broadcast('schemaFormValidate')
+
+        # if it's valid, return the value to the model,
+        # otherwise return undefined.
         if valid then value else undefined
 
-      # add a formatter that will process each time the value is updated on the DOM element.
+      # add a formatter that will process each time
+      # the value is updated on the DOM element.
       ctrl.$formatters.unshift (value) ->
 
         valid = IBAN.isValid(value)
@@ -58,6 +62,7 @@ angular.module('schemaForm').directive 'iban', ->
 
         if valid
           value = IBAN.printFormat(value)
+          scope.$broadcast('schemaFormValidate')
 
         # return the value or nothing will be written to the DOM.
         value
